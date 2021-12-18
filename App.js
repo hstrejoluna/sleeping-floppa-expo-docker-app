@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, ImageBackground, Text, View, Button } from "react-native";
 import { Audio } from "expo-av";
 
 import Zzz from "./components/zzz";
 const uri = "https://thumbs.gfycat.com/ZestyCluelessEyas-max-1mb.gif";
+const background = require('./assets/mainback.png');
+
 
 export default function App() {
   const [sound, setSound] = useState(null);
@@ -36,8 +38,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Zzz imgzzz={uri} />
-      <Button title="Play" onPress={playSound} style={styles.button}/>
+      <ImageBackground source={background} resizeMode="cover" style={styles.image}>
+        <Zzz imgzzz={uri} />
+
+        <Button title="Play" onPress={playSound} style={styles.button} />
+      </ImageBackground>
     </View>
   );
 }
@@ -47,14 +52,18 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "#fff",
+   
+  },
 
-    backgroundImage: 'url("https://i.ibb.co/SchPqXr/sleepfloppa.png")',
-    backgroundSize: "cover",
+  image: {
+    flex: 1,
+    justifyContent: "center",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  button:{
+
+  button: {
     width: 200,
     height: 300,
-  }
+  },
 });
