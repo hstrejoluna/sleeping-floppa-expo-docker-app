@@ -13,18 +13,14 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
+    "assetBundlePatterns": ["**/*"],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.sleepingfloppa.hstrejoluna"
+      "package": "com.sleepingfloppa.hstrejoluna",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
