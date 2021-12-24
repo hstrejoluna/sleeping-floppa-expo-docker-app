@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, ImageBackground, Text, View, Button } from "react-native";
 import { Audio } from "expo-av";
 
-import Zzz from "./components/AnimatedImage";
+import AnimatedImage from '@components/ImageComponents/AnimatedImage';
 const uri = "https://thumbs.gfycat.com/ZestyCluelessEyas-max-1mb.gif";
 const background = require('./assets/mainback.png');
 
@@ -39,7 +39,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ImageBackground source={background} resizeMode="cover" style={styles.image}>
-        <Zzz imgzzz={uri} />
+        <AnimatedImage img={uri} />
 
         <Button title="Play" onPress={playSound} style={styles.button} />
       </ImageBackground>
