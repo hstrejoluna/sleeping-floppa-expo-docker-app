@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 
-export default function Zzz(props) {
+export default function AnimatedImage(props) {
   return (
-    <View style={styles.zzz}>
+    <View style={styles.animatedImage}>
       <Image
         style={styles.image}
         source={{
-          uri: props.imgzzz,
+          uri: props.img,
         }}
       />
     </View>
@@ -15,7 +15,7 @@ export default function Zzz(props) {
 }
 
 const styles = StyleSheet.create({
-  zzz: {
+  animatedImage: {
     height: 300,
     width: 300,
     paddingBottom: 100,

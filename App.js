@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, ImageBackground, Text, View, Button } from "react-native";
 import { Audio } from "expo-av";
 
-import Zzz from "./components/zzz";
+import Zzz from "./components/AnimatedImage";
 const uri = "https://thumbs.gfycat.com/ZestyCluelessEyas-max-1mb.gif";
 const background = require('./assets/mainback.png');
 
