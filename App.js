@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, ImageBackground, Text, View, Button } from "react-native";
 import { Audio } from "expo-av";
 
-import AnimatedImage from '@components/ImageComponents/AnimatedImage';
+import AnimatedImage from "@components/ImageComponents/AnimatedImage";
+import Live from "@components/live";
 const uri = "https://thumbs.gfycat.com/ZestyCluelessEyas-max-1mb.gif";
-const background = require('./assets/mainback.png');
-
+const background = require("./assets/mainback.png");
 
 export default function App() {
   const [sound, setSound] = useState(null);
@@ -38,7 +38,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={background} resizeMode="cover" style={styles.image}>
+      <ImageBackground
+        source={background}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <Live />
+
         <AnimatedImage img={uri} />
 
         <Button title="Play" onPress={playSound} style={styles.button} />
@@ -52,7 +58,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "#fff",
-   
   },
 
   image: {
