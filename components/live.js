@@ -13,8 +13,8 @@ export default function live() {
   }, []);
 
   return (
-    <View style={[styles.container, { opacity: showLive ? 0 : 1 }]}>
-      <View style={styles.circle}></View>
+    <View style={[styles.container,  { opacity: showLive ? 0.7 : 1 }]}>
+      <View style={[styles.circle,  { opacity: showLive ? 0 : 1 }]}></View>
       <Text style={styles.liveText}>LIVE</Text>
     </View>
   );
