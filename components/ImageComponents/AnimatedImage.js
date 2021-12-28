@@ -16,7 +16,9 @@ export default function AnimatedImage(props) {
 
 const styles = StyleSheet.create({
   animatedImage: {
+    flex: 1,
     height: 300,
+    marginBottom: 500,
     width: 300,
     paddingBottom: 100,
     backgroundSize: "contain",

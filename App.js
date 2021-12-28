@@ -56,18 +56,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    zIndex: 1,
     flexDirection: "column",
     backgroundColor: "#fff",
   },
 
   image: {
     flex: 1,
-    justifyContent: "center",
-    justifyContent: "space-between",
+    flexDirection: "column",
+    overflow: "hidden",
+    justifyContent: "flex-start",
     alignItems: "center",
   },
 
   button: {
+    flex: 1,
     width: 200,
     height: 300,
   },

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 
 export default function live() {
+  const [showLive, setShowLive] = useState(true);
+
+  useEffect(() => {
+    // Change the state every second or the time given by User.
+    const interval = setInterval(() => {
+      setShowLive((showLive) => !showLive);
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { opacity: showLive ? 0 : 1 }]}>
       <View style={styles.circle}></View>
       <Text style={styles.liveText}>LIVE</Text>
     </View>
@@ -12,7 +22,11 @@ export default function live() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    zIndex: 5,
     height: 30,
+    marginBottom: -180,
+    marginRight: 250,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
