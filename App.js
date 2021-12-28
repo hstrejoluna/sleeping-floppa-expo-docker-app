@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    flex: 1,
     width: 200,
     height: 300,
+    padding: 50,
   },
 });
